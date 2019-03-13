@@ -272,7 +272,7 @@ void JointTrajectoryActionController::controllerStateCB(const control_msgs::Foll
 
 int main(int argc, char** argv)
 {
-    ros::init(argc, argv, "follow_joint_trajecotry_action_server");
+    ros::init(argc, argv, "follow_joint_trajectory_action_server");
     ros::NodeHandle node;
 
     // Retrieve the (non-option) argument:
