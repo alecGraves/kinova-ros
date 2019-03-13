@@ -1,4 +1,4 @@
-#include <moveit/move_group_interface/move_group.h>
+#include <moveit/move_group_interface/move_group_interface.h>
 #include <moveit/planning_scene_interface/planning_scene_interface.h>
 
 #include <moveit_msgs/DisplayRobotState.h>
@@ -25,10 +25,10 @@ int main(int argc, char **argv)
   // Setup
   // ^^^^^
   // 
-  // The :move_group_interface:`MoveGroup` class can be easily 
+  // The :move_group_interface:`MoveGroupInterface` class can be easily 
   // setup using just the name
   // of the group you would like to control and plan for.
-  moveit::planning_interface::MoveGroup group("arm");
+  moveit::planning_interface::MoveGroupInterface group("arm");
 
   // We will use the :planning_scene_interface:`PlanningSceneInterface`
   // class to deal directly with the world.
@@ -72,7 +72,7 @@ int main(int argc, char **argv)
   // and visualize it.
   // Note that we are just planning, not asking move_group 
   // to actually move the robot.
-  moveit::planning_interface::MoveGroup::Plan my_plan;
+  moveit::planning_interface::MoveGroupInterface::Plan my_plan;
 
   auto success = group.plan(my_plan);
 
